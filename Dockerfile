@@ -24,7 +24,7 @@ RUN mkdir -p $WORK && \
     wget -qO- --no-check-certificate https://github.com/leifei/macode/archive/$BRANCH/master.tar.gz | tar -xzf - -C $WORK
 
 
-WORKDIR $WORK/shadowsocksr-$BRANCH-master/shadowsocks
+WORKDIR $WORK/macode-$BRANCH-master/shadowsocks
 
 
 EXPOSE $SERVER_PORT
