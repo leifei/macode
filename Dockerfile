@@ -11,7 +11,7 @@ ENV TIMEOUT         300
 ENV DNS_ADDR        119.29.29.29
 ENV DNS_ADDR_2      223.5.5.5
 
-ARG BRANCH=akkariiin/master
+ARG BRANCH=akkariiin
 ARG WORK=~
 
 
@@ -21,7 +21,7 @@ RUN apk --no-cache add python \
 
 
 RUN mkdir -p $WORK && \
-    wget -qO- --no-check-certificate https://github.com/leifei/macode/archive/$BRANCH.tar.gz | tar -xzf - -C $WORK
+    wget -qO- --no-check-certificate https://github.com/leifei/macode/archive/$BRANCH/master.tar.gz | tar -xzf - -C $WORK
 
 
 WORKDIR $WORK/shadowsocksr-$BRANCH-master/shadowsocks
